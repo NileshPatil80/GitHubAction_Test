@@ -3,6 +3,8 @@ on: push
 jobs:
   my-job:
     runs-on: ubuntu-latest
+    environment: 
+      name: Dev
     steps:
       - name: my-step
-        run: echo "Hello Test World!!!!"
+        run: echo "Hello World!"
