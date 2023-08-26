@@ -1,0 +1,14 @@
+name: apache2_start
+on: push
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    environment: 
+      name: Dev
+    steps:
+      - name: my-step
+        run: echo "Hello World!"
+      - name: install apache
+        run: sudo apt-fast install -y apache2
+      - name: start apache
+        run: sudo service apache2 start
